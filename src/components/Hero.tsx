@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 const candidates = [
   {
@@ -12,15 +13,17 @@ const candidates = [
     stack: ["Node.js", "PostgreSQL", "AWS"],
     color: "bg-indigo-500",
     status: "Available next week",
+    avatar: "/avatars/white.png",
   },
   {
-    initials: "SR",
-    name: "Sofia R.",
+    initials: "LC",
+    name: "Lina Chen",
     role: "Senior Backend Engineer",
     experience: "8 yrs",
     stack: ["Python", "Django", "GCP"],
     color: "bg-emerald-500",
     status: "Available now",
+    avatar: "/avatars/asian.png",
   },
   {
     initials: "AJ",
@@ -30,6 +33,7 @@ const candidates = [
     stack: ["Go", "Kubernetes", "Redis"],
     color: "bg-amber-500",
     status: "Available next week",
+    avatar: "/avatars/indian.png",
   },
 ];
 
@@ -56,9 +60,17 @@ function CandidateCard({
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-center gap-3">
           <div
-            className={`w-10 h-10 rounded-full ${candidate.color} flex items-center justify-center text-xs font-bold text-white`}
+            className={`w-10 h-10 rounded-full ${candidate.color} p-[2px] flex items-center justify-center`}
           >
-            {candidate.initials}
+            <div className="w-full h-full rounded-full overflow-hidden bg-bg-card">
+              <Image
+                src={candidate.avatar}
+                alt={candidate.name}
+                width={40}
+                height={40}
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
           <div>
             <p className="text-[15px] font-semibold text-text-primary">{candidate.name}</p>
