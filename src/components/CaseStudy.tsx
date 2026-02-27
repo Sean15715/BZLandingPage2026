@@ -27,6 +27,20 @@ export default function CaseStudy() {
           {/* Subtle glow behind card */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[200px] bg-accent/[0.06] rounded-full blur-[80px] pointer-events-none" />
 
+          {/* Company logo (top-left) */}
+          <div className="absolute top-6 left-6 md:top-8 md:left-8 z-10">
+            <div className="h-8 md:h-9 w-auto px-2.5 rounded-md bg-white/80 dark:bg-white/70 border border-border shadow-sm backdrop-blur-sm flex items-center">
+              <Image
+                src="/Zingage.png"
+                alt="Zingage"
+                width={140}
+                height={36}
+                className="h-5 md:h-6 w-auto object-contain"
+                priority
+              />
+            </div>
+          </div>
+
           <div className="relative">
             {/* Stars */}
             <div className="flex gap-1 mb-6">
