@@ -29,13 +29,13 @@ export default function CaseStudy() {
 
           {/* Company logo (top-left) */}
           <div className="absolute top-6 left-6 md:top-8 md:left-8 z-10">
-            <div className="h-8 md:h-9 w-auto px-2.5 rounded-md bg-white/80 dark:bg-white/70 border border-border shadow-sm backdrop-blur-sm flex items-center">
+            <div className="h-10 md:h-12 w-auto px-3 rounded-md bg-white/80 dark:bg-white/70 border border-border shadow-sm backdrop-blur-sm flex items-center">
               <Image
                 src="/Zingage.png"
                 alt="Zingage"
-                width={140}
-                height={36}
-                className="h-5 md:h-6 w-auto object-contain"
+                width={190}
+                height={48}
+                className="h-7 md:h-8 w-auto object-contain"
                 priority
               />
             </div>
@@ -43,7 +43,7 @@ export default function CaseStudy() {
 
           <div className="relative">
             {/* Stars */}
-            <div className="flex gap-1 mb-6">
+            <div className="flex justify-end gap-1 mb-6">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} size={18} className="fill-amber text-amber" />
               ))}
