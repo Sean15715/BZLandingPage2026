@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Star, BadgeCheck } from "lucide-react";
+import Image from "next/image";
 
 export default function CaseStudy() {
   return (
@@ -46,8 +47,14 @@ export default function CaseStudy() {
             {/* Attribution */}
             <div className="flex items-center justify-between flex-wrap gap-4">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-accent/15 flex items-center justify-center text-sm font-bold text-accent">
-                  DT
+                <div className="w-12 h-12 rounded-full overflow-hidden bg-accent/15 flex items-center justify-center">
+                  <Image
+                    src="/avatars/DT.png"
+                    alt="Daniel Tian"
+                    width={48}
+                    height={48}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
