@@ -28,7 +28,7 @@ export default function CaseStudy() {
           <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[200px] bg-accent/[0.06] rounded-full blur-[80px] pointer-events-none" />
 
           {/* Company logo (top-left) */}
-          <div className="absolute top-6 left-6 md:top-8 md:left-8 z-10">
+          <div className="absolute top-6 left-6 md:top-8 md:left-8 z-10 flex flex-col items-start gap-3">
             <div className="h-10 md:h-12 w-auto px-3 rounded-md bg-white/80 dark:bg-white/70 border border-border shadow-sm backdrop-blur-sm flex items-center">
               <Image
                 src="/Zingage.png"
@@ -39,15 +39,14 @@ export default function CaseStudy() {
                 priority
               />
             </div>
-          </div>
-
-          <div className="relative">
-            {/* Stars */}
-            <div className="flex justify-end gap-1 mb-6">
+            <div className="flex gap-1">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} size={18} className="fill-amber text-amber" />
               ))}
             </div>
+          </div>
+
+          <div className="relative pt-16 md:pt-[3.5rem]">
 
             {/* Quote */}
             <blockquote className="text-xl md:text-2xl lg:text-[1.7rem] text-text-primary leading-relaxed font-medium mb-10">
