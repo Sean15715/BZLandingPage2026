@@ -17,6 +17,11 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      # If you're using a custom domain (served from site root), keep this empty.
+      # If you remove the custom domain and use the default GitHub Pages repo URL,
+      # delete this env var so basePath auto-detects "/<repo>".
+      NEXT_PUBLIC_BASE_PATH: ""
     steps:
       - name: Checkout
         uses: actions/checkout@v4
